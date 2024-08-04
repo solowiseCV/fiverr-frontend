@@ -1,0 +1,156 @@
+.register {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 50px;
+  
+    form {
+      display: flex;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #f9f9f9;
+    }
+  
+    .left,
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 30px;
+    }
+  
+    .left {
+      border-right: 1px solid #e0e0e0;
+  
+      h1 {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+  
+      label {
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+  
+      input {
+        padding: 12px;
+        outline: none;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+  
+      button {
+        color: white;
+        background-color: #013914;
+        cursor: pointer;
+        border: none;
+        padding: 12px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #013914;
+        }
+      }
+    }
+  
+    .right {
+      h1 {
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+  
+      .toggle {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+  
+        label {
+          font-weight: 600;
+          font-size: 14px;
+        }
+  
+        .switch {
+          margin-left: 10px;
+          position: relative;
+          display: inline-block;
+          width: 40px;
+          height: 20px;
+  
+          input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+          }
+  
+          .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 20px;
+  
+            &:before {
+              position: absolute;
+              content: "";
+              height: 14px;
+              width: 14px;
+              left: 3px;
+              bottom: 3px;
+              background-color: white;
+              transition: 0.4s;
+              border-radius: 50%;
+            }
+          }
+  
+          input:checked + .slider {
+            background-color: #013914;
+          }
+  
+          input:checked + .slider:before {
+            transform: translateX(20px);
+          }
+  
+          .slider.round {
+            border-radius: 20px;
+          }
+        }
+      }
+  
+      label {
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+  
+      input,
+      textarea {
+        padding: 12px;
+        outline: none;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+  
+      textarea {
+        resize: vertical;
+      }
+    }
+  }
+  
